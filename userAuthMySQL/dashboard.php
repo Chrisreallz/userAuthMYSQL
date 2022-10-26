@@ -1,3 +1,9 @@
+<?php
+
+include("./php/userauth.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +31,12 @@
      }
      ?>
   </h3>
+
+  <form action="php/action.php" method="GET">
+        <button class="btn-primary" name="all">
+        Show All Users
+       </button>
+     </form>
   
 </div>
 </body>
