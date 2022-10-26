@@ -1,14 +1,21 @@
 <?php 
-    // Enable us to use Headers
-    ob_start();
-    // Set sessions
-    if(!isset($_SESSION)) {
-        session_start();
+   
+    function db() {
+        $host = "localhost";
+        $user = " root";
+        $password = "";
+        $db = "zuriphp";
+       
+        //create connection
+        $conn = mysqli_connect("localhost", "root", "", "zuriphp");
+        //check connection
+        if ($conn){
+            die("Database connection not established:" . $conn);
+        }
+        else{
+            echo "connected successfully";
+        }
+        return $conn;
     }
-    $hostname = "localhost";
-    $username = "phpdemo";
-    $password = "4Mu99BhzK8dr4vF1";
-    $dbname = "positronx_db";
-    
-    $connection = mysqli_connect($hostname, $username, $password, $dbname) or die("Database connection not established.")
+   
 ?>
